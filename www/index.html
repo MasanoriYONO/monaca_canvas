@@ -17,6 +17,12 @@ $(function(){
     var paint = false;
     var offset = 5;
     var draw = false;
+    var img = new Image();
+    img.onload = (function(){
+        console.log("image onload.");
+    });
+    //画像のパス指定
+    img.src = "smile.png";
     
     /* マウスの座標を取得する */
     $("#canvas").on("mousemove",function(e) {
